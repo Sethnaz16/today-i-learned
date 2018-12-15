@@ -10,7 +10,6 @@ import { getStoredState } from './lib/store-state.js';
 // regular components
 import Container from './components/container.js';
 import Header from './components/header.js';
-import SuccessMsg from './components/successMsg.js';
 
 // route components
 import Home from './components/home.js';
@@ -26,7 +25,6 @@ const App = () => (
       </Helmet>
       <Container>
         <Header />
-        {!!process.env.REACT_APP_CTF_CMA_TOKEN && <SuccessMsg />}
         <Switch>
           <Route
             exact
