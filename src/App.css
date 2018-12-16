@@ -6,9 +6,10 @@
 
 body,
 html {
+  font-family: 'Roboto Mono', monospace;
   height: 100%;
   font-size: 100%;
-  line-height: 1.425;
+  line-height: 1.5;
 
   --color-body: #555;
   --color-headlines: #444;

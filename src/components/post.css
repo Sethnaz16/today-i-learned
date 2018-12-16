@@ -5,3 +5,9 @@
   color: #eee;
   border-radius: 0;
 }
+
+.c-post img {
+  max-width: 200px;
+  margin: 0 auto;
+  display: inherit;
+}

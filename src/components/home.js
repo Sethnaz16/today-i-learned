@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet';
+//import { Link } from 'react-router-dom';
+//import { Helmet } from 'react-helmet';
 import getClient from '../lib/get-contentful-client.js';
 import { storeState } from '../lib/store-state.js';
 
-import { Card, CardHeader } from './card.js';
+//import { Card, CardHeader } from './card.js';
 import { Spinner } from './loading.js';
 
 class Home extends Component {
@@ -65,60 +65,16 @@ class Home extends Component {
     } else {
       return (
         <div>
-          <Helmet>
+          {/* <Helmet>
             <title>Today I learned | Home</title>
-          </Helmet>
-          <h1 className="centered">Today I learned</h1>
+          </Helmet> */}
 
-          <Card>
-            <h2>What is this?</h2>
-            <p>
-              Web development and being a "programmer" often feels overwhelming.
-              The amount of information out there is very intimidating.
-              Especially when you're entering the field it's very easy to feel
-              lost and stuck.
-            </p>
-            <p>
-              Writing down learnings helps to fight this feeling. With this
-              project you can easily start building a central place to see the
-              progress on your learning journey.
-            </p>
-            <p>
-              And maybe (just maybe)... you want to share your learnings, too,
-              because what you'll learn over time is that nobody knows
-              everything and that every learning from your perspective can be
-              completely new to someone else.
-            </p>
-          </Card>
-
-          <h2 className="centered">Learnings</h2>
+          {/* <Card>
+          </Card> */}
           <ul className="o-grid">
-            {Object.entries(categories).map(
-              ([categorySlug, { category, posts }]) => (
-                <li key={categorySlug}>
-                  <Card>
-                    <CardHeader className={`o-gradient-${categorySlug}`}>
-                      {category.fields.title}
-                      <img
-                        aria-hidden="true"
-                        src={category.fields.icon.fields.file.url}
-                        alt=""
-                      />
-                    </CardHeader>
-                    <ul>
-                      {posts.map(({ sys, fields }) => (
-                        <li key={sys.id}>
-                          <Link to={`/posts/${fields.slug}/`}>
-                            {fields.title}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                    <br />
-                  </Card>
-                </li>
-              )
-            )}
+           {/*  {Object.entries(categories).map(
+              
+            )} */}
           </ul>
         </div>
       );
