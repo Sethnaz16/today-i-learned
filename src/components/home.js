@@ -57,7 +57,8 @@ class Home extends Component {
   }
 
   render() {
-    const { error, categories, isLoaded } = this.state;
+    //const { error, categories, isLoaded } = this.state;
+    const { error, isLoaded } = this.state;
     if (error) {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
